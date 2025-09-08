@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+<div class="pb-16">
+    <nav class="mb-8" aria-label="Breadcrumb">
+        <a href="{{ site.baseurl }}/" class="inline-flex items-center text-gray-600 hover:text-gray-900 text-sm transition-colors">
+            ← Back to home
+        </a>
+    </nav>
+
+    <article>
+        <header class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-4">
+                {{ page.title }}
+            </h1>
+            <div class="flex items-center space-x-4 text-sm text-gray-500">
+                <time datetime="{{ page.date | date_to_xmlschema }}">
+                    {{ page.date | date: "%B %d, %Y" }}
+                </time>
+                {% if page.reading_time %}
+                <span>{{ page.reading_time }}</span>
+                {% endif %}
+                {% if page.tags %}
+                <div class="flex space-x-2">
+                    {% for tag in page.tags %}
+                    <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </header>
+
+        <div class="prose">
+            {{ content }}
+        </div>
+        
+        {% if page.tags %}
+        <footer class="mt-12 pt-8 border-t border-gray-200">
+            <div class="flex flex-wrap gap-2">
+                <span class="text-sm text-gray-600">Tagged:</span>
+                {% for tag in page.tags %}
+                <a href="{{ site.baseurl }}/tags/{{ tag | slugify }}" class="text-sm text-gray-600 hover:text-gray-900 underline">
+                    {{ tag }}
+                </a>
+                {% endfor %}
+            </div>
+        </footer>
+        {% endif %}
+    </article>
+    
+    {% assign related_posts = site.related_posts | limit: 3 %}
+    {% if related_posts.size > 0 %}
+    <aside class="mt-16 pt-8 border-t border-gray-200">
+        <h3 class="text-lg font-semibold text-gray-900 mb-6">Related Posts</h3>
+        <div class="space-y-4">
+            {% for post in related_posts %}
+            <article>
+                <a href="{{ post.url | relative_url }}" class="block group">
+                    <h4 class="font-medium text-gray-900 group-hover:text-gray-700 transition-colors">
+                        {{ post.title }}
+                    </h4>
+                    <p class="text-sm text-gray-600 mt-1">
+                        {% if post.excerpt %}{{ post.excerpt | strip_html | truncate: 100 }}{% endif %}
+                    </p>
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+    </aside>
+    {% endif %}
+</div>

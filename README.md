@@ -1,13 +1,13 @@
 # FirstHop - Computer Networking Blog
 
-A clean, minimal Hugo blog focused on computer networking education by Dani Issac. Built with modern web standards and optimized for performance and accessibility.
+A clean, minimal Jekyll blog focused on computer networking education by Dani Issac. Built with modern web standards and optimized for performance and accessibility.
 
 ## ✨ Features
 
 - 🌐 **Networking focused** - Computer networking education and tutorials
 - 📝 **Markdown-based content** - Easy to write and maintain technical posts
 - 🎨 **Clean design** - Minimal aesthetic optimized for readability
-- ⚡ **Hugo-powered** - Lightning-fast static site generation
+- ⚡ **Jekyll-powered** - Fast and reliable static site generation
 - 📱 **Responsive design** - Great experience on all devices
 - 🚀 **Custom domain** - Hosted at firsthop.tech
 - 🎯 **SEO optimized** - Structured data and meta tags
@@ -19,7 +19,8 @@ A clean, minimal Hugo blog focused on computer networking education by Dani Issa
 
 ### Prerequisites
 
-- [Hugo](https://gohugo.io/installation/) (extended version recommended)
+- [Ruby](https://www.ruby-lang.org/en/downloads/) (version 3.0 or higher)
+- [Bundler](https://bundler.io/) gem
 - Git
 
 ### Local Development
@@ -30,58 +31,58 @@ A clean, minimal Hugo blog focused on computer networking education by Dani Issa
    cd firsthop
    ```
 
-2. **Start the development server**
+2. **Install dependencies**
    ```bash
-   hugo server -D
+   bundle install
    ```
 
-3. **Open your browser**
-   Visit [http://localhost:1313](http://localhost:1313)
+3. **Start the development server**
+   ```bash
+   bundle exec jekyll serve
+   ```
+
+4. **Open your browser**
+   Visit [http://localhost:4000](http://localhost:4000)
 
 ### Adding Content
 
 1. **Create a new blog post**
    ```bash
-   hugo new blog/my-new-post.md
+   # Create file: _posts/YYYY-MM-DD-title.md
+   touch _posts/2024-01-15-my-new-post.md
    ```
 
 2. **Edit the post**
    ```markdown
-   +++
-   title = 'My New Post'
-   date = '2024-01-15T10:00:00-08:00'
-   draft = false
-   summary = 'A brief description of your post'
-   readingTime = '5 min read'
-   tags = ['networking', 'tutorial']
-   categories = ['networking']
-   +++
-
-   # My New Post
+   ---
+   layout: post
+   title: "My New Post"
+   date: 2024-01-15 10:00:00 -0800
+   categories: [networking]
+   tags: [networking, tutorial]
+   reading_time: "5 min read"
+   excerpt: "A brief description of your post"
+   ---
 
    Your content here...
    ```
 
-3. **Set `draft = false`** when ready to publish
+3. **The post will be automatically published** when you push to main
 
 ## 📁 Project Structure
 
 ```
-├── content/
-│   ├── blog/           # Blog posts
-│   ├── about.md        # About page
-│   └── _index.md       # Homepage content
-├── themes/firsthop-theme/
-│   ├── layouts/        # HTML templates
-│   │   ├── _default/   # Default templates
-│   │   ├── partials/   # Reusable components
-│   │   └── index.html  # Homepage template
-│   └── theme.toml      # Theme configuration
-├── static/             # Static assets
-├── archetypes/         # Content templates
+├── _posts/             # Blog posts
+├── _layouts/           # HTML templates
+├── _includes/          # Reusable components
+├── _site/              # Generated site (ignored)
 ├── .github/workflows/  # GitHub Actions
-├── hugo.toml          # Site configuration
-└── README.md          # This file
+├── _config.yml         # Site configuration
+├── Gemfile             # Ruby dependencies
+├── index.html          # Homepage
+├── about.md            # About page
+├── blog.md             # Blog listing page
+└── README.md           # This file
 ```
 
 ## 🔧 Configuration
@@ -102,27 +103,19 @@ title = 'FirstHop'
 
 ### Social Links
 
-Update social media links in `hugo.toml`:
+Update social media links in `_config.yml`:
 
-```toml
-[params.social]
-  twitter = 'https://twitter.com/yourusername'
-  github = 'https://github.com/yourusername'
-  youtube = 'https://youtube.com/@yourusername'
-  linkedin = 'https://linkedin.com/in/yourusername'
+```yaml
+social:
+  twitter: https://twitter.com/yourusername
+  github: https://github.com/yourusername
+  youtube: https://youtube.com/@yourusername
+  linkedin: https://linkedin.com/in/yourusername
 ```
 
 ### Navigation Menu
 
-Customize the navigation in `hugo.toml`:
-
-```toml
-[menu]
-  [[menu.main]]
-    name = 'About'
-    url = '/about/'
-    weight = 10
-```
+Navigation is configured in the `_includes/header.html` file and can be customized there.
 
 ## 🚀 Deployment
 
@@ -147,9 +140,9 @@ Customize the navigation in `hugo.toml`:
 
 ```bash
 # Build the site
-hugo --gc --minify
+bundle exec jekyll build
 
-# Deploy the public/ folder to your hosting provider
+# Deploy the _site/ folder to your hosting provider
 ```
 
 ## 📝 Content Guidelines
@@ -167,20 +160,20 @@ hugo --gc --minify
 ### Front Matter
 
 ```yaml
-+++
-title = 'Post Title'
-date = '2024-01-15T10:00:00-08:00'
-draft = false
-summary = 'Brief description for previews and SEO'
-readingTime = '5 min read'
-tags = ['networking', 'tutorial', 'beginner']
-categories = ['networking']
-+++
+---
+layout: post
+title: "Post Title"
+date: 2024-01-15 10:00:00 -0800
+categories: [networking]
+tags: [networking, tutorial, beginner]
+reading_time: "5 min read"
+excerpt: "Brief description for previews and SEO"
+---
 ```
 
 ## 🎯 Performance
 
-- **Hugo builds**: Typically < 100ms
+- **Jekyll builds**: Fast and reliable
 - **Lighthouse score**: 100/100/100/100
 - **Bundle size**: Minimal (Tailwind via CDN)
 - **Core Web Vitals**: Optimized for all metrics
@@ -190,16 +183,16 @@ categories = ['networking']
 
 ### Theme Development
 
-The custom theme is located in `themes/firsthop-theme/`:
+The custom theme uses Jekyll's built-in structure:
 
-- `layouts/_default/baseof.html` - Base template
-- `layouts/partials/` - Reusable components
-- `layouts/partials/head/` - Head-specific partials
+- `_layouts/default.html` - Base template
+- `_includes/` - Reusable components
+- `_layouts/` - Page templates
 
 ### Styling
 
 - Uses Tailwind CSS via CDN for rapid development
-- Custom styles in `layouts/partials/head/styles.html`
+- Custom styles in `_layouts/default.html`
 - Responsive design with mobile-first approach
 - Dark mode ready (can be enabled)
 
@@ -227,7 +220,7 @@ MIT License - feel free to use this for your own projects!
 - **Author**: [Dani Issac](https://daniissac.com) - Network engineer and educator
 - **Design inspiration**: [Lee Robinson](https://leerob.io)
 - **Original design**: [next-mdx-blog](https://github.com/leerob/next-mdx-blog)
-- **Built with**: [Hugo](https://gohugo.io) and [Tailwind CSS](https://tailwindcss.com)
+- **Built with**: [Jekyll](https://jekyllrb.com) and [Tailwind CSS](https://tailwindcss.com)
 - **Hosted on**: [GitHub Pages](https://pages.github.com) with custom domain
 
 ---

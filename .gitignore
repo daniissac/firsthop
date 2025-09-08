@@ -1,11 +1,13 @@
-# Hugo build output
-/public/
-/resources/_gen/
-/assets/jsconfig.json
-hugo_stats.json
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
 
-# Hugo cache
-/.hugo_build.lock
+# Ruby/Bundler
+vendor/
+.bundle/
+Gemfile.lock
 
 # Temporary files
 *.tmp
@@ -95,12 +97,10 @@ jspm_packages/
 # TernJS port file
 .tern-port
 
-# Hugo modules
-go.sum
-go.mod
-
-# Local development
-.hugo_build.lock
+# Jekyll specific
+.jekyll-cache/
+_site/
+.sass-cache/
 
 # Backup files
 *.bak
