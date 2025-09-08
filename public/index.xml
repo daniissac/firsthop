@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dani Issac</title>
+    <title>FirstHop</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Dani Issac</description>
+    <description>Recent content on FirstHop</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jan 2025 21:31:31 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Sep 2025 13:33:41 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Wed, 08 Jan 2025 21:31:31 -0800</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;h1 id=&#34;about&#34;&gt;About&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;m a network engineer, educator, and content creator passionate about making computer networking accessible to everyone. I believe that understanding how networks work is fundamental to building better systems and applications.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-journey&#34;&gt;My Journey&lt;/h2&gt;&#xA;&lt;p&gt;I started my career in network operations, working with enterprise networks and ISPs. Over the years, I&amp;rsquo;ve worked with everything from small office networks to large-scale data center infrastructures. This hands-on experience taught me that networking doesn&amp;rsquo;t have to be intimidating—it just needs to be explained clearly.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Welcome to FirstHop</title>
       <link>http://localhost:1313/blog/hello-world/</link>
@@ -42,6 +35,13 @@
       <pubDate>Mon, 01 Jan 2024 10:00:00 -0800</pubDate>
       <guid>http://localhost:1313/blog/tcp-vs-udp/</guid>
       <description>Understanding the differences between TCP and UDP protocols and when to use each one in real-world applications.</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m a network engineer, educator, and content creator passionate about making computer networking accessible to everyone. I believe that understanding how networks work is fundamental to building better systems and applications.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-journey&#34;&gt;My Journey&lt;/h2&gt;&#xA;&lt;p&gt;I started my career in network operations, working with enterprise networks and ISPs. Over the years, I&amp;rsquo;ve worked with everything from small office networks to large-scale data center infrastructures. This hands-on experience taught me that networking doesn&amp;rsquo;t have to be intimidating—it just needs to be explained clearly.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

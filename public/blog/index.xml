@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Dani Issac</title>
+    <title>Blog on FirstHop</title>
     <link>http://localhost:1313/blog/</link>
-    <description>Recent content in Blog on Dani Issac</description>
+    <description>Recent content in Blog on FirstHop</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jan 2024 10:00:00 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Welcome to FirstHop</title>

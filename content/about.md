@@ -3,8 +3,6 @@ title = 'About'
 description = 'Learn about Dani Issac, network engineer, educator, and content creator passionate about making computer networking accessible.'
 +++
 
-# About
-
 I'm a network engineer, educator, and content creator passionate about making computer networking accessible to everyone. I believe that understanding how networks work is fundamental to building better systems and applications.
 
 ## My Journey
