@@ -6,6 +6,7 @@ categories: [networking]
 tags: [welcome, introduction, networking, education]
 reading_time: "3 min read"
 excerpt: "Welcome to FirstHop! A new networking blog focused on making complex concepts simple and accessible for everyone."
+author: "Dani Issac"
 ---
 
 Welcome to FirstHop, where we take the first step into understanding computer networking! I'm Dani Issac, and I'm excited to share my passion for networking with you.

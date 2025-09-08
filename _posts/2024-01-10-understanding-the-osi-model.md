@@ -6,6 +6,7 @@ categories: [networking]
 tags: [osi-model, fundamentals, theory, beginner]
 reading_time: "6 min read"
 excerpt: "The OSI model is fundamental to networking. Learn how data flows through the seven layers and why each layer matters."
+author: "Dani Issac"
 ---
 
 The OSI (Open Systems Interconnection) model is one of the most important concepts in networking. It provides a framework for understanding how data moves through a network, breaking down the complex process into seven manageable layers.

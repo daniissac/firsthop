@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-description: Learn about Dani Issac, network engineer, educator, and content creator passionate about making computer networking accessible.
+description: Learn about FirstHop, a networking blog by Dani Issac focused on making computer networking concepts accessible to everyone.
 ---
 
 I'm a network engineer, educator, and content creator passionate about making computer networking accessible to everyone. I believe that understanding how networks work is fundamental to building better systems and applications.

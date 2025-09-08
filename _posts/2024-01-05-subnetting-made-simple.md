@@ -6,6 +6,7 @@ categories: [networking]
 tags: [subnetting, ip-addressing, fundamentals, tutorial]
 reading_time: "8 min read"
 excerpt: "Master IP subnetting with practical examples and easy-to-follow methods. No more subnet calculator dependency!"
+author: "Dani Issac"
 ---
 
 Subnetting is often considered one of the most challenging topics for networking beginners. But it doesn't have to be! Let's break it down into simple, manageable concepts with practical examples.

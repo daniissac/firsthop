@@ -1,6 +1,6 @@
 # FirstHop - Computer Networking Blog
 
-A clean, minimal Jekyll blog focused on computer networking education by Dani Issac. Built with modern web standards and optimized for performance and accessibility.
+A clean, minimal Jekyll blog focused on computer networking education. FirstHop is created by Dani Issac and built with modern web standards, optimized for performance and accessibility.
 
 ## ✨ Features
 
@@ -224,7 +224,7 @@ MIT License - feel free to use this for your own projects!
 
 ## 🙏 Credits
 
-- **Author**: [Dani Issac](https://daniissac.com) - Network engineer and educator
+- **Author**: [Dani Issac](https://daniissac.com) - Creator of FirstHop, network engineer and educator
 - **Design inspiration**: [Lee Robinson](https://leerob.io)
 - **Original design**: [next-mdx-blog](https://github.com/leerob/next-mdx-blog)
 - **Built with**: [Jekyll](https://jekyllrb.com) and [Tailwind CSS](https://tailwindcss.com)
