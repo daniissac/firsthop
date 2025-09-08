@@ -4,8 +4,8 @@ subtitle: Network Engineer & Educator
 description: Network engineer, educator, and content creator. Simplifying computer networking concepts for everyone.
 author: Dani Issac
 email: hello@firsthop.tech
-baseurl: "/firsthop"
-url: "https://daniissac.github.io"
+baseurl: ""
+url: "https://firsthop.tech"
 
 # Social Links
 social:
@@ -15,7 +15,7 @@ social:
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: /:categories/:title/
+permalink: /blog/:title/
 timezone: America/Los_Angeles
 
 # Plugins

@@ -26,17 +26,20 @@ A clean, minimal Jekyll blog focused on computer networking education by Dani Is
 ### Local Development
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/daniissac/firsthop.git
    cd firsthop
    ```
 
 2. **Install dependencies**
+
    ```bash
    bundle install
    ```
 
 3. **Start the development server**
+
    ```bash
    bundle exec jekyll serve
    ```
@@ -47,12 +50,14 @@ A clean, minimal Jekyll blog focused on computer networking education by Dani Is
 ### Adding Content
 
 1. **Create a new blog post**
+
    ```bash
    # Create file: _posts/YYYY-MM-DD-title.md
    touch _posts/2024-01-15-my-new-post.md
    ```
 
 2. **Edit the post**
+
    ```markdown
    ---
    layout: post
@@ -122,6 +127,7 @@ Navigation is configured in the `_includes/header.html` file and can be customiz
 ### GitHub Pages (Automatic)
 
 1. **Push to GitHub**
+
    ```bash
    git add .
    git commit -m "Initial commit"
@@ -129,6 +135,7 @@ Navigation is configured in the `_includes/header.html` file and can be customiz
    ```
 
 2. **Enable GitHub Pages**
+
    - Go to repository Settings → Pages
    - Source: GitHub Actions
    - The workflow will run automatically

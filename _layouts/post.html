@@ -4,7 +4,7 @@ layout: default
 
 <div class="pb-16">
     <nav class="mb-8" aria-label="Breadcrumb">
-        <a href="{{ site.baseurl }}/" class="inline-flex items-center text-gray-600 hover:text-gray-900 text-sm transition-colors">
+        <a href="/" class="inline-flex items-center text-gray-600 hover:text-gray-900 text-sm transition-colors">
             ← Back to home
         </a>
     </nav>
@@ -40,7 +40,7 @@ layout: default
             <div class="flex flex-wrap gap-2">
                 <span class="text-sm text-gray-600">Tagged:</span>
                 {% for tag in page.tags %}
-                <a href="{{ site.baseurl }}/tags/{{ tag | slugify }}" class="text-sm text-gray-600 hover:text-gray-900 underline">
+                <a href="/tags/{{ tag | slugify }}/" class="text-sm text-gray-600 hover:text-gray-900 underline">
                     {{ tag }}
                 </a>
                 {% endfor %}
