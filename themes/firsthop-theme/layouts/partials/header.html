@@ -1,0 +1,17 @@
+<header class="no-print">
+    <nav class="flex items-center justify-between py-10" role="navigation" aria-label="Main navigation">
+        <a href="{{ .Site.BaseURL }}" class="text-2xl font-bold text-gray-900 hover:text-gray-700 transition-colors" aria-label="Home">
+            {{ .Site.Params.title }}
+        </a>
+        
+        <div class="flex space-x-4">
+            {{ range .Site.Menus.main }}
+            <a href="{{ .URL | relURL }}" 
+               class="text-gray-600 hover:text-gray-900 transition-colors px-3 py-2 rounded-md text-sm font-medium"
+               {{ if $.IsMenuCurrent "main" . }}aria-current="page"{{ end }}>
+                {{ .Name }}
+            </a>
+            {{ end }}
+        </div>
+    </nav>
+</header>

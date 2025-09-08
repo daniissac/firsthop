@@ -1,0 +1,85 @@
+# Site Configuration
+baseURL = 'https://firsthop.tech'
+languageCode = 'en-us'
+title = 'FirstHop'
+theme = 'firsthop-theme'
+
+# Content and Build Settings
+defaultContentLanguage = 'en'
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+
+# Pagination
+[pagination]
+  pagerSize = 10
+  path = 'page'
+
+# Site Parameters
+[params]
+  title = 'Dani Issac'
+  subtitle = 'Network Engineer & Educator'
+  description = 'Network engineer, educator, and content creator. Simplifying computer networking concepts for everyone.'
+  author = 'Dani Issac'
+  email = 'hello@firsthop.tech'
+  
+  # Social Links
+  [params.social]
+    twitter = 'https://twitter.com/daniissac'
+    github = 'https://github.com/daniissac'
+    youtube = 'https://youtube.com/@daniissac'
+    linkedin = 'https://linkedin.com/in/daniissac'
+
+# Navigation Menu
+[menu]
+  [[menu.main]]
+    name = 'About'
+    url = '/about/'
+    weight = 10
+  [[menu.main]]
+    name = 'Blog'
+    url = '/blog/'
+    weight = 20
+
+# Markup Configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = 'github'
+  
+  [markup.highlight]
+    style = 'github'
+    lineNos = false
+    codeFences = true
+    guessSyntax = true
+    noClasses = false
+
+# SEO and Meta
+[sitemap]
+  changefreq = 'weekly'
+  priority = 0.5
+
+# Output formats
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+  page = ['HTML']
+  section = ['HTML', 'RSS']
+
+# Privacy Configuration
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = false
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = false

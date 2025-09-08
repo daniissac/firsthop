@@ -1,0 +1,13 @@
+name = "FirstHop Theme"
+license = "MIT"
+licenselink = "https://github.com/daniissac/firsthop/blob/main/LICENSE"
+description = "A clean, minimal Hugo theme for networking blogs and technical content"
+homepage = "https://firsthop.tech"
+demosite = "https://firsthop.tech"
+tags = ["blog", "minimal", "clean", "responsive", "networking", "technical", "education"]
+features = ["responsive", "syntax highlighting", "seo", "accessibility", "performance"]
+min_version = "0.100.0"
+
+[author]
+  name = "Dani Issac"
+  homepage = "https://daniissac.com"
